@@ -6,7 +6,8 @@
             <div><span class="h-model">Model : </span><span class="val-model">{{data.model}}</span></div>
             <div><span class="h-year">Year : </span><span class="val-year">{{data.year}}</span></div>
             <div>{{data.detail}}</div>
-            <div>{{data.price | currency: 'USD' : 'symbol' : '1.0-0'}}</div>
+            <div>{{data.description}}</div>
+            <div class="color-text">{{data.price | currency: 'USD' : 'symbol' : '1.0-0'}}</div>
            
 
             <div style="display: flex;">
