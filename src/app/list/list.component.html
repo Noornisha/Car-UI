@@ -1,0 +1,53 @@
+<div class="header">
+  <div class="filter">
+    <mat-card class="filter-container">
+      <form [formGroup]="FilterForm" novalidate>
+        <div style="display: flex; flex-direction: column; width: 100%; padding: 0 10px 0 0;">
+          <span class="label">Pick Year</span>
+          <mat-form-field appearance="outline">
+            <mat-select formControlName="carYear" (selectionChange)="generateData()">
+              <mat-option value="all">All</mat-option>
+              <mat-option *ngFor="let year of carYear" [value]="year">{{year}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div style="display: flex; flex-direction: column; width: 100%; padding: 0 10px 0 10px;">
+          <span class="label">Pick Model</span>
+          <mat-form-field appearance="outline">
+            <mat-select formControlName="carModel" (selectionChange)="generateData()">
+              <mat-option value="all">All</mat-option>
+              <mat-option *ngFor="let model of carModel" [value]="model">{{model}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div style="display: flex; flex-direction: column; width: 100%; padding: 0 0 0 10px;">
+          <span class="label">Search</span>
+          <mat-form-field appearance="outline">
+            <input matInput formControlName="carSearch" (keyup)="generateData()" >
+          </mat-form-field>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+
+</div>
+<div class="heading">Available Cars</div>
+<div class="list">
+  <div class="item" *ngFor="let item of dataBinding; let index = index;">
+    <mat-card>
+      <div class="top">
+        <img class="img" [src]="item.image" alt="">
+        <span class="price">{{item.price | currency: 'USD' : 'symbol' : '1.0-0'}}</span>
+      </div>
+
+      <div class="bottom">
+        <div class="name">{{item.name}}</div>
+        <div><span class="h-model">Model : </span><span class="val-model">{{item.model}}</span></div>
+        <div><span class="h-year">Year : </span><span class="val-year">{{item.year}}</span></div>
+        <button [routerLink]="['/detail']" routerLinkActive="router-link-active" (click)="openDetails(item)" class="detail-btn">More Details</button>
+      </div>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="main">
+    <img src="https://images.unsplash.com/photo-1597404294360-feeeda04612e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
+    <div class="right">
+        <div class="bottom">
+            <div class="name">{{data.name}}</div>
+            <div><span class="h-model">Model : </span><span class="val-model">{{data.model}}</span></div>
+            <div><span class="h-year">Year : </span><span class="val-year">{{data.year}}</span></div>
+            <div>{{data.detail}}</div>
+            <div>{{data.price | currency: 'USD' : 'symbol' : '1.0-0'}}</div>
+           
+
+            <div style="display: flex;">
+                <button [routerLink]="['/detail']" routerLinkActive="router-link-active"  class="Order-btn">Order Now</button>
+                <button [routerLink]="['']" routerLinkActive="router-link-active"  class="detail-btn">Go Back</button>
+            </div>
+            
+          </div>
+    </div>
+</div>

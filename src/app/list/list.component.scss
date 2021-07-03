@@ -1,0 +1,125 @@
+.header {
+  height: 220px;
+  background: #7b7b7e;
+  background: -moz-linear-gradient(left, #7b7b7e 0%, #0c1636 100%);
+  background: -webkit-linear-gradient(left, #7b7b7e 0%, #0c1636 100%);
+  background: linear-gradient(to right, #7b7b7e 0%, #0c1636 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7b7b7e', endColorstr='#0c1636', GradientType=1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  .filter {
+    width: 60%;
+
+    .filter-container {
+
+      padding-bottom: 0;
+
+      form {
+        display: flex;
+      }
+    }
+  }
+
+  .label {
+    color: #999999;
+    font-size: 12px;
+    font-family: 'Ubuntu', sans-serif !important;
+  }
+}
+
+.heading {
+  font-size: 32px;
+  text-align: center;
+  font-weight: 600;
+  padding: 50px 0;
+  font-family: 'Ubuntu', sans-serif !important;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 83.5vw;
+  margin: 0 auto;
+
+  .item {
+    padding: 14px 30px;
+
+    mat-card {
+      padding: 0;
+      width: 320px;
+
+      .top {
+        position: relative;
+
+        .img {
+          width: 100%;
+          border-radius: 4px;
+        }
+
+        .price {
+          position: absolute;
+          font-family: 'Ubuntu', sans-serif;
+          top: 20px;
+          left: 20px;
+          padding: 2px 14px 1px 14px;
+          border-radius: 8px;
+          background: rgb(255 255 255 / 90%);
+          color: #727272;
+          font-weight: 600;
+          font-size: 16px;
+        }
+      }
+
+      .bottom {
+        padding: 20px;
+
+        .name {
+          font-weight: 600;
+          font-size: 24px;
+          color: #333333;
+          font-family: 'Ubuntu', sans-serif;
+          margin-bottom: 20px;
+        }
+
+        .h-model {
+          font-family: 'Ubuntu', sans-serif;
+          color: #333333;
+          font-weight: 600;
+        }
+
+        .val-model {
+          color: #999999;
+          font-family: 'Ubuntu', sans-serif;
+        }
+
+        .h-year {
+          font-family: 'Ubuntu', sans-serif;
+          color: #333333;
+          font-weight: 600;
+        }
+
+        .val-year {
+          color: #999999;
+          font-family: 'Ubuntu', sans-serif;
+        }
+
+        .detail-btn {
+          margin-top: 20px;
+          background: #ADADAD;
+          border: none;
+          border-radius: 4px;
+          color: #fff;
+          font-weight: 600;
+          width: 100%;
+          padding: 10px 0;
+          font-size: 16px;
+          font-family: 'Ubuntu', sans-serif;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

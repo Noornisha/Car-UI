@@ -1,0 +1,68 @@
+.main {
+    display: flex;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    .bottom {
+        padding: 20px;
+
+        .name {
+          font-weight: 600;
+          font-size: 24px;
+          color: #333333;
+          font-family: 'Ubuntu', sans-serif;
+          margin-bottom: 20px;
+        }
+
+        .h-model {
+          font-family: 'Ubuntu', sans-serif;
+          color: #333333;
+          font-weight: 600;
+        }
+
+        .val-model {
+          color: #999999;
+          font-family: 'Ubuntu', sans-serif;
+        }
+
+        .h-year {
+          font-family: 'Ubuntu', sans-serif;
+          color: #333333;
+          font-weight: 600;
+        }
+
+        .val-year {
+          color: #999999;
+          font-family: 'Ubuntu', sans-serif;
+        }
+
+        .detail-btn {
+          margin-top: 20px;
+          background: #ADADAD;
+          border: none;
+          border-radius: 4px;
+          color: #fff;
+          font-weight: 600;
+          width: 100%;
+          padding: 10px 0;
+          margin-left: 5px;
+          font-size: 16px;
+          font-family: 'Ubuntu', sans-serif;
+        }
+        .Order-btn {
+          margin-top: 20px;
+          background: #3f51b5;
+          border: none;
+          border-radius: 4px;
+          color: #fff;
+          font-weight: 600;
+          width: 100%;
+          padding: 10px 0;
+          margin-left: 5px;
+          font-size: 16px;
+          font-family: 'Ubuntu', sans-serif;
+        }
+      }
+}
